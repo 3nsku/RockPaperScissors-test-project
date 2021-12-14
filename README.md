@@ -1,3 +1,22 @@
+
+# LOGIC
+
+- To Start the Match Everything the contract requires 2 player addresses and a bet size.
+- Then each player chooses a move! The move is enrypted with a random temporary key generated localy, the player move is store encoded on chain. (e.g. "ROCK" + "123456").
+- This guarantes that the second player will no be able look up the first player move locked on the Blockchain.
+- Once Both Players have submited their encoded moves, the match can proceed.
+- Each one will have to pass their local temporary secret_key and decode their move. 
+- Once Both Players have decoded their move we find the winner, distribute the Winnings and reset the mappings!
+
+## RIGHT TO CANCEL MATCH
+- If only 1 player submits a encoded move, and the other player goes offline or stops playing. After a minimin wait of 60 seconds the first player has the right to cancel the match and withdraw the submited bet.
+
+
+
+
+
+
+____________________
 # RockPaperScissors test project
 
 You will create a smart contract named `RockPaperScissors` whereby:  
