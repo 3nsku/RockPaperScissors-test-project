@@ -1,4 +1,4 @@
-# LOGIC
+## LOGIC
 
 - To Start a Match, the contract requires 2 player addresses and a bet size. The player how wants to set up the match, starts by calling the the function **setUpMatch** inside the Smart Contract.
 
@@ -15,6 +15,17 @@
 ## RIGHT TO CANCEL MATCH
 
 - If only 1 player submits an encoded move, and the other player goes offline or stops playing. After a minimin wait of 60 seconds the first player has the right to cancel the match and withdraw the submited bet by calling **cancelMatchAndReturnFunds**
+
+## PROJECT OVERVIEW
+
+- This project was created using the Brownie framework
+
+- **RockPaperScissors.sol**: has all the smart contarct logic
+- **MockFAU.sol**: is an ERC20 token created using OpenZeppling. This mock contract is used during local testing
+
+- **helpful_scripts.py**: contains function that are used multiple times through the contract
+- **test_rock_paper_scissors.py**: contains all the units test
+- **conftest.py**: has all the static variable used during testing
 
 ---
 
